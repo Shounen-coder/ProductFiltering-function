@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gradient-to-b from-black via-gray-900 to-black text-white h-screen">
+    <nav class="bg-gray-900 p-4 ">
+        <div class="container max-w-6xl mx-auto flex flex-col sm:flex-row gap-8 items-center ">
+            
+            <!-- Search Area -->
+            <div class="relative w-full">
+                <input 
+                    type="text"
+                    id="search"
+                    class="bg-gray-800 rounded-full p-1 pl-10 focus:w-full"
+                    placeholder="Search for Products..."
+                    />
+                    <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500"></i>
+            </div>
+
+             <!-- Cart icon -->
+             <div class="relative">
+                <i class="fas fa-shopping-bag text-gray-300 text-xl"></i>
+                <span id="cart-count" class="absolute top-0 right-0 bg-red-600 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center -translate-x-2 -translate-y-2">
+                    0
+                </span>
+            </div>
+        </div>
+    </nav>
+    <main class="flex flex-col  mx-auto md:flex-row container max-w-6xl">
+        <div class="space-y-4 p-2 w-full max-w-[10rem]">
+            <h2 class="text-2xl">Filters</h2>
+            <h3 class="text-xl">Categories</h3>
+            <div id="filters-container" class="text-xl space-y-2">
+                <div>
+                    <input type="checkbox" class="check" id="thriller">
+                    <label for="thriller">Thriller</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="check" id="romance">
+                    <label for="romance">Romance</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="check" id="fantasy">
+                    <label for="fantasy">Fantasy</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="check" id="sci-fi">
+                    <label for="sci-fi">Sci-fi</label>
+                </div>
+                <h3 class="text-xl">Stock:</h3>
+                <div>
+                    <input type="checkbox" class="check" id="in-stock">
+                    <label for="in-stock">In-Stock</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Wrapper -->
+         <div id="product-wrapper" class="w-full max-w-4xl p-6 mx-auto grid grid-cols-2
+         sm:grid-cols-3 xl:grid-cols-4 gap-6 place-content-center">
+        </div>
+    </main>
+
+    <script src="/script.js"></script>
+</body>
+</html>
